@@ -8,15 +8,15 @@ title.ShowTitle();
 CoffeeMachine coffeeMachine = new CoffeeMachine();
 
 coffeeMachine.makeCappuccino(
-        Roasting.LIGHT,
         VolumeML.ML300,
+        Roasting.LIGHT,
         Milk.NO,
         Foam.YES
 );
 
 coffeeMachine.makeLatte(
-        Roasting.DARK,
         VolumeML.ML500,
+        Roasting.DARK,
         Milk.YES,
         Foam.YES
 );
