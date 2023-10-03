@@ -7,7 +7,16 @@ title.ShowTitle();
 
 CoffeeMachine coffeeMachine = new CoffeeMachine();
 
-coffeeMachine.makeCappuccino(Roasting.LIGHT,VolumeML.ML300);
-coffeeMachine.makeLatte(Roasting.DARK,VolumeML.ML500);
+coffeeMachine.makeCappuccino(
+        Roasting.LIGHT,
+        VolumeML.ML300,
+        Milk.NO,
+        Foam.YES);
+
+coffeeMachine.makeLatte(
+        Roasting.DARK,
+        VolumeML.ML500,
+        Milk.YES,
+        Foam.YES);
     }
 }
