@@ -1,4 +1,4 @@
-package coffee;
+package Ingredient;
 
 public enum Milk {
     YES,
