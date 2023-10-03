@@ -11,12 +11,14 @@ coffeeMachine.makeCappuccino(
         Roasting.LIGHT,
         VolumeML.ML300,
         Milk.NO,
-        Foam.YES);
+        Foam.YES
+);
 
 coffeeMachine.makeLatte(
         Roasting.DARK,
         VolumeML.ML500,
         Milk.YES,
-        Foam.YES);
+        Foam.YES
+);
     }
 }
