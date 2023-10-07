@@ -5,7 +5,11 @@ public enum CoffeePowderGramm {
     Double(10);
     private int value;
 
-    CoffeePowderGramm(int value){
+    CoffeePowderGramm(int value) {
         this.value = value;
+    }
+
+    public int getValue() {
+        return value;
     }
 }

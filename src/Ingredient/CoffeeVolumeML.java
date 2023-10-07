@@ -12,4 +12,7 @@ public enum CoffeeVolumeML {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
 }
