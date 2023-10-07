@@ -3,8 +3,6 @@ package recipe;
 import Ingredient.CoffeePowderGramm;
 import Ingredient.CoffeeVolumeML;
 
-import static Ingredient.CoffeePowderGramm.*;
-
 public class Espresso {
     public CoffeePowderGramm addEspresso(CoffeePowderGramm coffeePowderGramm) {
 
