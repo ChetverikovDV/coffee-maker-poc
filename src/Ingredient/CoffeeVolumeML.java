@@ -8,7 +8,7 @@ public enum CoffeeVolumeML {
     ML500(500);
     private int value;
 
-    CoffeeVolumeML(int value){
+     CoffeeVolumeML(int value){
         this.value = value;
     }
 
