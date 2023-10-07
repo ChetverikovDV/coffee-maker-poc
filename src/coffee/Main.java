@@ -1,29 +1,16 @@
 package coffee;
 
-import Ingredient.Foam;
-import Ingredient.Milk;
-import Ingredient.Roasting;
-import Ingredient.CoffeeVolumeML;
+import recipe.Espresso;
 
 public class Main {
     public static void main(String[] args) {
-Title title = new Title();
-title.ShowTitle();
+        Title title = new Title();
+        title.ShowTitle();
 
-CoffeeMachine coffeeMachine = new CoffeeMachine();
 
-coffeeMachine.makeCappuccino(
-        CoffeeVolumeML.ML300,
-        Roasting.LIGHT,
-        Milk.NO,
-        Foam.YES
-);
+        CoffeeMachine coffeeMachine = new CoffeeMachine();   //Запускаем кофемашину
+        Espresso espresso = new Espresso();                  //Загружаем рецепт эспрессо
 
-coffeeMachine.makeLatte(
-        CoffeeVolumeML.ML500,
-        Roasting.DARK,
-        Milk.YES,
-        Foam.YES
-);
+        coffeeMachine.makeEspresso(espresso);                // Варим эспрессо
     }
 }
