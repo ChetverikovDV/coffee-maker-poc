@@ -11,7 +11,7 @@ public class Espresso {
         System.out.println("Наслаждайся своим " + coffeePowderGramm +" espresso");
         System.out.println();
         System.out.println("Состав: " + CoffeeVolumeML.ML50.getValue() + "мл. воды, " + coffeePowderGramm.getValue() + "гр. кофе");
-        return valueOf(String.valueOf(coffeePowderGramm));
+        return(coffeePowderGramm);
     }
 }
 
