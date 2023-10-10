@@ -7,11 +7,14 @@ public class Main {
         Title title = new Title();
         title.ShowTitle();
 
-        Espresso espresso = new Espresso(5, 55);
-        System.out.println(espresso);
+
+        Coffee espresso = new Espresso(5, 55);
+        Coffee doubleEspresso = new Espresso(10, 110);
 
         CoffeeMachine coffeeMachine = new CoffeeMachine();
-        coffeeMachine.makeCoffee();
+
+        coffeeMachine.MakeCoffee(espresso);
+        coffeeMachine.MakeCoffee(doubleEspresso);
 
     }
 }

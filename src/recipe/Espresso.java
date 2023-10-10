@@ -1,6 +1,8 @@
 package recipe;
 
-public class Espresso {
+import coffee.Coffee;
+
+public class Espresso extends Coffee {
     int coffee;
     int water;
 
@@ -13,8 +15,8 @@ public class Espresso {
         return "Espresso is a "
                 + coffee + " gr of wonderful coffee and the "
                 + water + " ml of spring water";
-
     }
+
 }
 
 

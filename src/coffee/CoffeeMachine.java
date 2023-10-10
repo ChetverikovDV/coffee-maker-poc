@@ -1,7 +1,9 @@
 package coffee;
 
-public class CoffeeMachine {
-    public void makeCoffee() {
+public class CoffeeMachine implements Boiled {
 
+    public void MakeCoffee(Coffee coffee) {
+        System.out.println("Готовлю " + coffee);
     }
+
 }
