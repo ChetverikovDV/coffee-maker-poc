@@ -12,9 +12,8 @@ public class Espresso extends Coffee {
     }
 
     public String toString() {
-        return "Espresso is a "
-                + coffee + " gr of wonderful coffee and the "
-                + water + " ml of spring water";
+        return  coffee + " gr of coffee and the "
+                + water + " ml of water";
     }
 
 }

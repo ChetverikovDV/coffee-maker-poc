@@ -1,7 +1,7 @@
 package coffee;
 
-public class Title {
-    public void ShowTitle() {
+public class Display {
+    public void ShowDisplay() {
         System.out.println(" ______________________________________");
         System.out.println("| ВАС ПРИВЕТСТВУЕТ УПОРОТАЯ КОФЕМАШИНА |");
         System.out.println("| Я пока умею варить только эспрессо,  | ");
