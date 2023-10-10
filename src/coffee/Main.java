@@ -1,18 +1,17 @@
 package coffee;
 
-import Ingredient.CoffeePowderGramm;
 import recipe.Espresso;
-
 
 public class Main {
     public static void main(String[] args) {
         Title title = new Title();
         title.ShowTitle();
 
-        CoffeeMachine coffeeMachine = new CoffeeMachine();   //Запускаем кофемашину
-        Espresso espresso = new Espresso();                  //Загружаем рецепт эспрессо
+        Espresso espresso = new Espresso(5, 55);
+        System.out.println(espresso);
 
-        espresso.addEspresso(CoffeePowderGramm.Double);      //Указываем объем эспрессо
-        coffeeMachine.makeEspresso(espresso);                // Варим эспрессо
+        CoffeeMachine coffeeMachine = new CoffeeMachine();
+        coffeeMachine.makeCoffee();
+
     }
 }

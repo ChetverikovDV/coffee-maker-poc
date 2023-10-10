@@ -1,15 +1,19 @@
 package recipe;
 
-import Ingredient.CoffeePowderGramm;
-import Ingredient.WaterVolumeML;
-
 public class Espresso {
-    public CoffeePowderGramm addEspresso(CoffeePowderGramm coffeePowderGramm) {
+    int coffee;
+    int water;
 
-        System.out.println("Наслаждайся своим " + coffeePowderGramm +" espresso");
-        System.out.println();
-        System.out.println("Состав: " + WaterVolumeML.ML50.getValue() + "мл. воды, " + coffeePowderGramm.getValue() + "гр. кофе");
-        return(coffeePowderGramm);
+    public Espresso(int coffee, int water) {
+        this.coffee = coffee;
+        this.water = water;
+    }
+
+    public String toString() {
+        return "Espresso is a "
+                + coffee + " gr of wonderful coffee and the "
+                + water + " ml of spring water";
+
     }
 }
 
