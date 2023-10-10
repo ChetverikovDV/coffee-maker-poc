@@ -12,7 +12,7 @@ public class Espresso extends Coffee {
     }
 
     public String toString() {
-        return  coffee + " gr of coffee and the "
+        return  coffee + " gr of coffee and "
                 + water + " ml of water";
     }
 
