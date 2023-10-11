@@ -11,10 +11,6 @@ public class Espresso extends Coffee {
         this.water = water;
     }
 
-    public String getCoffee() {
-        return "Espresso";
-    }
-
     public String toString() {
         return coffee + " gr of coffee and "
                 + water + " ml of water";
