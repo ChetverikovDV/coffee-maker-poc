@@ -13,13 +13,13 @@ public class Main {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
         CoffeeGrinder grinder = new CoffeeGrinder();
 
-        Coffee espresso = new Espresso(5, 55, Grinding.FINE);
-        Coffee doubleEspresso = new Espresso(10, 110, Grinding.FINE);
-        Coffee cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
-        Coffee americano = new Americano(5, 55, Grinding.MEDIUM, 200);
+        Recipe espresso = new Espresso(5, 55, Grinding.FINE);
+        Recipe doubleEspresso = new Espresso(10, 110, Grinding.FINE);
+        Recipe cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
+        Recipe americano = new Americano(5, 55, Grinding.MEDIUM, 200);
 
         System.out.println("Процессор запущен ");
-        grinder.grind(cappuccino);
+        grinder.grind(americano);
 
         System.out.println();
 

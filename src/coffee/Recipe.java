@@ -2,7 +2,7 @@ package coffee;
 
 import Ingredient.Grinding;
 
-public class Coffee {
+public class Recipe {
     Grinding grinding;
     int coffee;
 

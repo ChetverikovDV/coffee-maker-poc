@@ -11,9 +11,9 @@ public class Americano extends Espresso {
     }
 
     public String toString() {
-        return coffee + " gr of coffee and "
-                + water + " ml of water and "
-                + moreWater + " ml WATER "
-                + grinding + " помола";
+        return coffee + " грамм кофе - "
+                + water + " мл. воды - "
+                + moreWater + " мл. дополнительной воды - "
+                + grinding.getTitle(grinding) + " помол";
     }
 }

@@ -11,9 +11,9 @@ public class Cappuccino extends Espresso {
     }
 
     public String toString() {
-        return coffee + " gr of coffee and "
-                + water + " ml of water and "
-                + foam + " ml of MILK FOAM "
-                + grinding + " grinding";
+        return coffee + " грамм кофе - "
+                + water + " мл. воды - "
+                + foam + " молочной пены  - "
+                + grinding.getTitle(grinding) + " помол";
     }
 }

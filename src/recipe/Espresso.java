@@ -1,9 +1,9 @@
 package recipe;
 
 import Ingredient.Grinding;
-import coffee.Coffee;
+import coffee.Recipe;
 
-public class Espresso extends Coffee {
+public class Espresso extends Recipe {
     int coffee;
     int water;
     Grinding grinding;
@@ -23,9 +23,9 @@ public class Espresso extends Coffee {
     }
 
     public String toString() {
-        return coffee + " gr of coffee and "
-                + water + " ml of water "
-                + grinding + " grinding";
+        return coffee + " грамм кофе - "
+                + water + " воды - "
+                + grinding.getTitle(grinding) + " помол";
     }
 
 }

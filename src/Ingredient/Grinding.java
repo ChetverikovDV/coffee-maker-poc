@@ -1,9 +1,9 @@
 package Ingredient;
 
 public enum Grinding {
-    FINE ("FINE"),
-    MEDIUM("MEDIUM"),
-    COURSE("COURSE");
+    FINE ("Мелкий"),
+    MEDIUM("Средний"),
+    COURSE("Грубый");
 
     private final String title;
 
