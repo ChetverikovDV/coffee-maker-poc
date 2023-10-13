@@ -18,7 +18,7 @@ public class Main {
         Coffee cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
         Coffee americano = new Americano(5, 55, Grinding.MEDIUM, 200);
 
-        System.out.println("Процесс пошел! ");
+        System.out.println("Процессор запущен ");
         grinder.grind(cappuccino);
 
         System.out.println();
