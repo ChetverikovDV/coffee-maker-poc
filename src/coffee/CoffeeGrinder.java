@@ -11,6 +11,7 @@ public class CoffeeGrinder {
                 "Кофемолка смолола для " + coffee.getClass().getSimpleName() +
                 " " + coffee.getCoffee() + " грамм кофе - "
                 + coffee.getGrinding().getTitle(grinding) + " помол");
+
     }
 }
 
