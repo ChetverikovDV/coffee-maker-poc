@@ -1,4 +1,4 @@
-package coffee;
+package hardware;
 
 import Ingredient.Grinding;
 import recipe.Americano;
@@ -15,7 +15,6 @@ public class Main {
         Recipe espresso = new Espresso(5, 55, Grinding.FINE);
         Recipe cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
         Recipe americano = new Americano(5, 55, Grinding.MEDIUM, 200);
-
 
         System.out.println();
 

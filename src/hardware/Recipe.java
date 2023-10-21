@@ -1,4 +1,4 @@
-package coffee;
+package hardware;
 
 import Ingredient.Grinding;
 

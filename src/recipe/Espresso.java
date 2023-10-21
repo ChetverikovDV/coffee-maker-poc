@@ -1,7 +1,7 @@
 package recipe;
 
 import Ingredient.Grinding;
-import coffee.Recipe;
+import hardware.Recipe;
 
 public class Espresso extends Recipe {
     int coffee;

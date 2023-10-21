@@ -1,4 +1,4 @@
-package coffee;
+package hardware;
 
 public class Display {
     public void ShowDisplay() {
