@@ -1,8 +1,8 @@
 package hardware;
 
-import Ingredient.Grinding;
+import ingredient.Grinding;
 
-public class Recipe {
+public class CurrentRecipe {
     Grinding grinding;
     int coffee;
 

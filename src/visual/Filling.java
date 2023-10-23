@@ -1,12 +1,12 @@
-package hardware;
+package visual;
 
 public class Filling {
     public void fill() {
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i <= 18; i++) {
             System.out.print("|");
             try {
                 long secondsToSleep = 10;
-                Thread.sleep(secondsToSleep * 11);
+                Thread.sleep(secondsToSleep * 30);
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }

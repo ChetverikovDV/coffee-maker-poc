@@ -1,23 +1,27 @@
 package hardware;
 
-public class CoffeeMachine implements Boiled {
+import module.CoffeeGrinder;
+import visual.Delay;
+import visual.Filling;
 
-    public void MakeCoffee(Recipe coffee) {
+public class CoffeeMachine {
+
+    public void MakeCoffee(CurrentRecipe coffee) {
         Filling filling = new Filling();
+        Delay delay = new Delay();
 
-        System.out.print("Запускаю процессор ");
+        System.out.println("Запускаю процессор ");
         filling.fill();
         System.out.println();
+        delay.delay();
 
         CoffeeGrinder grinder = new CoffeeGrinder(); //Запустили кофемолку
         grinder.grind(coffee);                       //Кофемолка смолола что-то по рецепту
-        filling.fill();
-        System.out.println();
+        delay.delay();
 
-        System.out.print("Готовлю " + coffee.getClass().getSimpleName() + " (" + coffee + ") ");
-        filling.fill();
+        System.out.println("Готовлю " + coffee.getClass().getSimpleName() + " (" + coffee + ") ");
         System.out.println();
-        System.out.println();;                        //Машин сварил остальное (пока нет других модулей)
+        delay.delay();                        //Машин сварил остальное (пока нет других модулей)
 
     }
 

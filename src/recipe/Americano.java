@@ -1,17 +1,17 @@
 package recipe;
 
-import Ingredient.Grinding;
+import ingredient.Grinding;
 
 public class Americano extends Espresso {
     int moreWater;
 
-    public Americano(int coffee, int water, Grinding grinding, int moreWater) {
-        super(coffee, water, grinding);
+    public Americano(int grammOfCoffee, int water, Grinding grinding, int moreWater) {
+        super(grammOfCoffee, water, grinding);
         this.moreWater = moreWater;
     }
 
     public String toString() {
-        return coffee + " грамм кофе - "
+        return grammOfCoffee + " грамм кофе - "
                 + water + " мл. воды - "
                 + moreWater + " мл. дополнительной воды - "
                 + grinding.getTitle(grinding) + " помол";

@@ -1,4 +1,4 @@
-package hardware;
+package visual;
 
 public class Display {
     public void ShowDisplay() {

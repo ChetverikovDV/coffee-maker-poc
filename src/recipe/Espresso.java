@@ -1,15 +1,15 @@
 package recipe;
 
-import Ingredient.Grinding;
-import hardware.Recipe;
+import hardware.CurrentRecipe;
+import ingredient.Grinding;
 
-public class Espresso extends Recipe {
-    int coffee;
+public class Espresso extends CurrentRecipe {
+    int grammOfCoffee;
     int water;
     Grinding grinding;
 
-    public Espresso(int coffee, int water, Grinding grinding) {
-        this.coffee = coffee;
+    public Espresso(int grammOfCoffee, int water, Grinding grinding) {
+        this.grammOfCoffee = grammOfCoffee;
         this.water = water;
         this.grinding = grinding;
     }
@@ -19,11 +19,11 @@ public class Espresso extends Recipe {
     }
 
     public int getCoffee() {
-        return coffee;
+        return grammOfCoffee;
     }
 
     public String toString() {
-        return coffee + " грамм кофе - "
+        return grammOfCoffee + " грамм кофе - "
                 + water + " воды - "
                 + grinding.getTitle(grinding) + " помол";
     }

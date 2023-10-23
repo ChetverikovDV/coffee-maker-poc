@@ -1,4 +1,4 @@
-package Ingredient;
+package ingredient;
 
 public enum Grinding {
     FINE ("Мелкий"),
