@@ -9,8 +9,9 @@ public class CoffeeGrinder {
 
     public void grind(CurrentRecipe coffee) {
         System.out.println(
-                "Кофемолка молет для " + coffee.getClass().getSimpleName() +
-                        " " + coffee.getCoffee() + " грамм кофе - "
+                "Кофемолка смолола "
+                        + coffee.getCoffee()
+                        + " грамм кофе - "
                         + coffee.getGrinding().getTitle(grinding) + " помол ")
         ;
 

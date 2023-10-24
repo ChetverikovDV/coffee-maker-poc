@@ -1,5 +1,6 @@
 package hardware;
 
+import module.Boiler;
 import module.CoffeeGrinder;
 import visual.Delay;
 import visual.Filling;
@@ -13,15 +14,19 @@ public class CoffeeMachine {
         System.out.println("Запускаю процессор ");
         filling.fill();
         System.out.println();
-        delay.delay();
+        delay.delay(20);
+
+        System.out.println("Готовлю " + coffee.getClass().getSimpleName() + " (" + coffee + ") ");
+        System.out.println();                        //Читаем рецепт
+        delay.delay(20);
 
         CoffeeGrinder grinder = new CoffeeGrinder(); //Запустили кофемолку
         grinder.grind(coffee);                       //Кофемолка смолола что-то по рецепту
-        delay.delay();
+        delay.delay(20);
 
-        System.out.println("Готовлю " + coffee.getClass().getSimpleName() + " (" + coffee + ") ");
-        System.out.println();
-        delay.delay();                        //Машин сварил остальное (пока нет других модулей)
+        Boiler boiler = new Boiler();                //Запустили "чайник"
+        boiler.boil(coffee);                         //Чайник вскипятил по рецепту
+        delay.delay(20);
 
     }
 

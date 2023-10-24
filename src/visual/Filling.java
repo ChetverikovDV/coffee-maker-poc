@@ -6,7 +6,7 @@ public class Filling {
             System.out.print("|");
             try {
                 long secondsToSleep = 10;
-                Thread.sleep(secondsToSleep * 30);
+                Thread.sleep(secondsToSleep * 10);
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }
