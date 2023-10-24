@@ -22,7 +22,9 @@ public class Espresso extends CurrentRecipe {
         return grammOfCoffee;
     }
 
-    public int getWater() {return water;}
+    public int getWater() {
+        return water;
+    }
 
     public String toString() {
         return grammOfCoffee + " грамм кофе - "

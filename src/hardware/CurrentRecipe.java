@@ -6,6 +6,7 @@ public class CurrentRecipe {
     Grinding grinding;
     int coffee;
     int water;
+    int simpleBoiledWater;
 
     public Grinding getGrinding() {
         return grinding;
@@ -16,5 +17,7 @@ public class CurrentRecipe {
     }
 
     public int getWater(){return water;}
+
+    public int getSimpleBoiledWater(){return simpleBoiledWater;}
 
 }

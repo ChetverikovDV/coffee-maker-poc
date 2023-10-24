@@ -2,6 +2,8 @@ package hardware;
 
 import module.Boiler;
 import module.CoffeeGrinder;
+import recipe.Americano;
+import recipe.Espresso;
 import visual.Delay;
 import visual.Filling;
 
@@ -10,6 +12,8 @@ public class CoffeeMachine {
     public void MakeCoffee(CurrentRecipe coffee) {
         Filling filling = new Filling();
         Delay delay = new Delay();
+
+        System.out.println();
 
         System.out.println("Запускаю процессор ");
         filling.fill();
@@ -27,6 +31,11 @@ public class CoffeeMachine {
         Boiler boiler = new Boiler();                //Запустили "чайник"
         boiler.boil(coffee);                         //Чайник вскипятил по рецепту
         delay.delay(20);
+
+        if (coffee.getSimpleBoiledWater() > 0){
+        boiler.flood(coffee);                        //просто добавил воды по рецепту
+        delay.delay(20);}
+
 
     }
 
