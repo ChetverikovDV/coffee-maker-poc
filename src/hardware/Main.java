@@ -2,17 +2,20 @@ package hardware;
 
 import ingredient.Grinding;
 import recipe.Tea;
-import visual.Display;
 import recipe.Americano;
 import recipe.Cappuccino;
 import recipe.Espresso;
+import visual.Visual;
+
 
 public class Main {
     public static void main(String[] args) {
-        Display title = new Display();
-        title.ShowDisplay();
+
 
         CoffeeMachine coffeeMachine = new CoffeeMachine();
+        Visual visual = new Visual();
+
+        visual.ShowDisplay();
 
         CurrentRecipe espresso = new Espresso(5, 55, Grinding.FINE);
         CurrentRecipe cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
@@ -21,8 +24,8 @@ public class Main {
 
         System.out.println();
 
-        // coffeeMachine.MakeCoffee(espresso);
-        //  coffeeMachine.MakeCoffee(cappuccino);
+        coffeeMachine.MakeCoffee(espresso);
+        coffeeMachine.MakeCoffee(cappuccino);
         coffeeMachine.MakeCoffee(americano);
         coffeeMachine.MakeCoffee(tea);
 

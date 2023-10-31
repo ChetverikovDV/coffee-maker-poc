@@ -18,7 +18,7 @@ public class Espresso extends CurrentRecipe {
         return grinding;
     }
 
-    public int getCoffee() {
+    public int getGrammOfCoffee() {
         return grammOfCoffee;
     }
 

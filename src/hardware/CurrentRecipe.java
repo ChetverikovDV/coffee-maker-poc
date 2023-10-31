@@ -4,20 +4,30 @@ import ingredient.Grinding;
 
 public class CurrentRecipe {
     Grinding grinding;
-    int coffee;
+    int grammOfCoffee;
     int water;
     int simpleBoiledWater;
+    int milkFoam;
 
     public Grinding getGrinding() {
+
         return grinding;
     }
 
-    public int getCoffee() {
-        return coffee;
+    public int getGrammOfCoffee() {
+        return grammOfCoffee;
     }
 
-    public int getWater(){return water;}
+    public int getWater() {
+        return water;
+    }
 
-    public int getSimpleBoiledWater(){return simpleBoiledWater;}
+    public int getSimpleBoiledWater() {
+        return simpleBoiledWater;
+    }
+
+    public int getMilkFoam() {
+        return milkFoam;
+    }
 
 }

@@ -1,41 +1,52 @@
 package hardware;
 
 import module.Boiler;
+import module.Cappuccinator;
 import module.CoffeeGrinder;
-import recipe.Americano;
-import recipe.Espresso;
-import visual.Delay;
-import visual.Filling;
+import visual.*;
 
 public class CoffeeMachine {
 
     public void MakeCoffee(CurrentRecipe coffee) {
-        Filling filling = new Filling();
-        Delay delay = new Delay();
+
+        Visual visual = new Visual();
 
         System.out.println();
 
         System.out.println("Запускаю процессор ");
-        filling.fill();
+        visual.fill(5);
+
         System.out.println();
-        delay.delay(20);
+        visual.delay(10);
 
         System.out.println("Готовлю " + coffee.getClass().getSimpleName() + " (" + coffee + ") ");
         System.out.println();                        //Читаем рецепт
-        delay.delay(20);
+        visual.delay(10);
 
-        CoffeeGrinder grinder = new CoffeeGrinder(); //Запустили кофемолку
-        grinder.grind(coffee);                       //Кофемолка смолола что-то по рецепту
-        delay.delay(20);
+        if (coffee.getGrammOfCoffee() > 0) {
+            CoffeeGrinder grinder = new CoffeeGrinder(); //Запустили кофемолку
+            grinder.grind(coffee);                       //Кофемолка смолола что-то по рецепту
+            visual.delay(10);
+        }
 
-        Boiler boiler = new Boiler();                //Запустили "чайник"
-        boiler.boil(coffee);                         //Чайник вскипятил по рецепту
-        delay.delay(20);
+        if (coffee.getWater() > 0) {
+            Boiler boiler = new Boiler();                //Запустили "чайник"
+            boiler.boil(coffee);                         //Чайник вскипятил по рецепту
+            visual.delay(10);
+        }
 
-        if (coffee.getSimpleBoiledWater() > 0){
-        boiler.flood(coffee);                        //просто добавил воды по рецепту
-        delay.delay(20);}
+        if (coffee.getSimpleBoiledWater() > 0) {
+            Boiler boiler = new Boiler();
+            boiler.flood(coffee);                        //просто добавил воды по рецепту
+            visual.delay(10);
+        }
 
+        if (coffee.getMilkFoam() > 0) {
+            Cappuccinator cappuccinator = new Cappuccinator();
+            cappuccinator.makeMilkFoam(coffee);
+            visual.delay(10);
+        }
+        System.out.println("__________________________________________________________________");
 
     }
 
