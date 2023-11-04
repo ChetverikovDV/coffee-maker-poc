@@ -50,4 +50,20 @@ public class CoffeeMachine {
 
     }
 
+    public void CheckPWR() {
+
+        int total;
+        Boiler boiler = new Boiler();
+        Cappuccinator cappuccinator = new Cappuccinator();
+        CoffeeGrinder coffeeGrinder = new CoffeeGrinder();
+
+        total = boiler.getPower() + coffeeGrinder.getPower() + cappuccinator.getPower();
+
+        System.out.println("_____________________");
+        System.out.print(total+ " Ватт в сумме");
+        System.out.println();
+
+    }
 }
+
+

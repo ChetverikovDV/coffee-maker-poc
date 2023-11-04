@@ -15,7 +15,7 @@ public class Main {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
         Visual visual = new Visual();
 
-        visual.ShowDisplay();
+        //visual.ShowDisplay();
 
         CurrentRecipe espresso = new Espresso(5, 55, Grinding.FINE);
         CurrentRecipe cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
@@ -24,10 +24,11 @@ public class Main {
 
         System.out.println();
 
-        coffeeMachine.MakeCoffee(espresso);
-        coffeeMachine.MakeCoffee(cappuccino);
-        coffeeMachine.MakeCoffee(americano);
-        coffeeMachine.MakeCoffee(tea);
+        //coffeeMachine.MakeCoffee(espresso);
+        //coffeeMachine.MakeCoffee(cappuccino);
+        //coffeeMachine.MakeCoffee(americano);
+        //coffeeMachine.MakeCoffee(tea);
 
+        coffeeMachine.CheckPWR();
     }
 }

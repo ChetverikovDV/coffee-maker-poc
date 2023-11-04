@@ -2,13 +2,14 @@ package module;
 
 import ingredient.Grinding;
 import hardware.CurrentRecipe;
+import interfaces.Power;
 
-public class CoffeeGrinder {
+public class CoffeeGrinder implements Power {
 
     Grinding grinding;
+    int powerConsumption = 800;
 
     public void grind(CurrentRecipe coffee) {
-
         System.out.println(
                 "Кофемолка смолола "
                         + coffee.getGrammOfCoffee()
@@ -16,6 +17,12 @@ public class CoffeeGrinder {
                         + coffee.getGrinding().getTitle(grinding) + " помол ")
         ;
 
+    }
+
+    @Override
+    public int getPower() {
+        System.out.println(powerConsumption+ " Ватт - Гриндер");
+        return powerConsumption;
     }
 }
 
