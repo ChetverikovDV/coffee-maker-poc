@@ -2,9 +2,9 @@ package module;
 
 import ingredient.Grinding;
 import hardware.CurrentRecipe;
-import interfaces.Power;
+import interfaces.Checkble;
 
-public class CoffeeGrinder implements Power {
+public class CoffeeGrinder implements Checkble {
 
     Grinding grinding;
     int powerConsumption = 800;
@@ -20,8 +20,11 @@ public class CoffeeGrinder implements Power {
     }
 
     @Override
-    public int getPower() {
+    public int check() {
         System.out.println(powerConsumption+ " Ватт - Гриндер");
+        return powerConsumption;
+    }
+    public int getPowerConsumption(){
         return powerConsumption;
     }
 }

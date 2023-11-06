@@ -29,6 +29,6 @@ public class Main {
         //coffeeMachine.MakeCoffee(americano);
         //coffeeMachine.MakeCoffee(tea);
 
-        coffeeMachine.CheckPWR();
+        coffeeMachine.check();
     }
 }

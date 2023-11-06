@@ -1,11 +1,13 @@
 package hardware;
 
+import interfaces.Checkble;
 import module.Boiler;
 import module.Cappuccinator;
 import module.CoffeeGrinder;
 import visual.*;
 
-public class CoffeeMachine {
+public class CoffeeMachine implements Checkble {
+    int powerConsumption = 200;
 
     public void MakeCoffee(CurrentRecipe coffee) {
 
@@ -50,20 +52,23 @@ public class CoffeeMachine {
 
     }
 
-    public void CheckPWR() {
+    public int check() {
+        System.out.println(powerConsumption + " Ватт - собственное потребление кофепроцессора");
 
-        int total;
         Boiler boiler = new Boiler();
         Cappuccinator cappuccinator = new Cappuccinator();
         CoffeeGrinder coffeeGrinder = new CoffeeGrinder();
+        CoffeeMachine coffeeMachine = new CoffeeMachine();
 
-        total = boiler.getPower() + coffeeGrinder.getPower() + cappuccinator.getPower();
+        int total = boiler.check() + cappuccinator.check() + coffeeGrinder.check() + powerConsumption;
+        System.out.println(total + " Ватт - Суммарное энергпотребление");
 
-        System.out.println("_____________________");
-        System.out.print(total+ " Ватт в сумме");
-        System.out.println();
+        return boiler.getPowerConsumption() + cappuccinator.getPowerConsumption() + coffeeGrinder.getPowerConsumption() + powerConsumption;
+
 
     }
+
 }
+
 
 

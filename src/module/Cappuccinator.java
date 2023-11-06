@@ -1,9 +1,9 @@
 package module;
 
 import hardware.CurrentRecipe;
-import interfaces.Power;
+import interfaces.Checkble;
 
-public class Cappuccinator implements Power {
+public class Cappuccinator implements Checkble {
     int powerConsumption = 300;
 
     public void makeMilkFoam(CurrentRecipe coffee) {
@@ -13,8 +13,12 @@ public class Cappuccinator implements Power {
     }
 
     @Override
-    public int getPower() {
+    public int check() {
         System.out.println(powerConsumption+" Ватт - Капучинатор");
+        return powerConsumption;
+    }
+
+    public int getPowerConsumption() {
         return powerConsumption;
     }
 }

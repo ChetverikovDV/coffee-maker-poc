@@ -1,9 +1,9 @@
 package module;
 
 import hardware.CurrentRecipe;
-import interfaces.Power;
+import interfaces.Checkble;
 
-public class Boiler implements Power {
+public class Boiler implements Checkble {
     int powerConsumption = 2000;
 
     public void boil(CurrentRecipe coffee) {
@@ -18,8 +18,11 @@ public class Boiler implements Power {
                         + coffee.getSimpleBoiledWater() + " мл. кипятка");
     }
 
-    public int getPower(){
+    public int check(){
         System.out.println(powerConsumption+" Ватт - Бойлер");
+        return powerConsumption;
+    }
+    public int getPowerConsumption(){
         return powerConsumption;
     }
 }
