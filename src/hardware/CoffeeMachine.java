@@ -48,7 +48,7 @@ public class CoffeeMachine implements Checkble {
             cappuccinator.makeMilkFoam(coffee);
             visual.delay(10);
         }
-        System.out.println("__________________________________________________________________");
+        System.out.println("________________________________________________________");
 
     }
 
@@ -66,6 +66,7 @@ public class CoffeeMachine implements Checkble {
 
         int total = boiler.getPowerConsumption() + cappuccinator.getPowerConsumption()
                 + coffeeGrinder.getPowerConsumption() + powerConsumption;
+        System.out.println("________________________________________________________");
         System.out.println(total + " Ватт - Суммарное энергпотребление");
 
         return coffeeMachine.powerConsumption;
