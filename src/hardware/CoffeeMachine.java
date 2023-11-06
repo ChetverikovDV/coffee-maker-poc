@@ -15,8 +15,6 @@ public class CoffeeMachine implements Checkble {
 
         System.out.println();
 
-        System.out.println("Запускаю процессор ");
-        visual.fill(5);
 
         System.out.println();
         visual.delay(10);
@@ -50,9 +48,13 @@ public class CoffeeMachine implements Checkble {
         }
         System.out.println("________________________________________________________");
 
+
     }
 
     public int check() {
+
+        System.out.println("Запускаю процессор ");
+
         System.out.println(powerConsumption + " Ватт - собственное потребление кофепроцессора");
 
         Boiler boiler = new Boiler();
@@ -61,8 +63,15 @@ public class CoffeeMachine implements Checkble {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
 
         boiler.check();
+        boiler.ready();
+
         cappuccinator.check();
         coffeeGrinder.check();
+
+        if (!boiler.ready()) {
+            System.out.println("Бойлер неисправен");
+            System.exit(0);
+        }
 
         int total = boiler.getPowerConsumption() + cappuccinator.getPowerConsumption()
                 + coffeeGrinder.getPowerConsumption() + powerConsumption;

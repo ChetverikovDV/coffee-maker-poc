@@ -14,6 +14,8 @@ public class Main {
 
 
         CoffeeMachine coffeeMachine = new CoffeeMachine();
+        coffeeMachine.check();
+
         Visual visual = new Visual();
 
         //visual.ShowDisplay();
@@ -26,12 +28,11 @@ public class Main {
 
         System.out.println();
 
-        //coffeeMachine.MakeCoffee(espresso);
-        //coffeeMachine.MakeCoffee(cappuccino);
-        //coffeeMachine.MakeCoffee(americano);
+        coffeeMachine.MakeCoffee(espresso);
+        coffeeMachine.MakeCoffee(cappuccino);
+        coffeeMachine.MakeCoffee(americano);
         coffeeMachine.MakeCoffee(tea);
 
-        coffeeMachine.check();
 
     }
 }
