@@ -1,6 +1,7 @@
 package hardware;
 
 import ingredient.Grinding;
+import module.Boiler;
 import recipe.Tea;
 import recipe.Americano;
 import recipe.Cappuccino;
@@ -17,6 +18,7 @@ public class Main {
 
         //visual.ShowDisplay();
 
+
         CurrentRecipe espresso = new Espresso(5, 55, Grinding.FINE);
         CurrentRecipe cappuccino = new Cappuccino(5, 55, Grinding.FINE, 100);
         CurrentRecipe americano = new Americano(5, 55, Grinding.MEDIUM, 200);
@@ -27,8 +29,9 @@ public class Main {
         //coffeeMachine.MakeCoffee(espresso);
         //coffeeMachine.MakeCoffee(cappuccino);
         //coffeeMachine.MakeCoffee(americano);
-        //coffeeMachine.MakeCoffee(tea);
+        coffeeMachine.MakeCoffee(tea);
 
         coffeeMachine.check();
+
     }
 }

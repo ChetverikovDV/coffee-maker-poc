@@ -60,10 +60,15 @@ public class CoffeeMachine implements Checkble {
         CoffeeGrinder coffeeGrinder = new CoffeeGrinder();
         CoffeeMachine coffeeMachine = new CoffeeMachine();
 
-        int total = boiler.check() + cappuccinator.check() + coffeeGrinder.check() + powerConsumption;
+        boiler.check();
+        cappuccinator.check();
+        coffeeGrinder.check();
+
+        int total = boiler.getPowerConsumption() + cappuccinator.getPowerConsumption()
+                + coffeeGrinder.getPowerConsumption() + powerConsumption;
         System.out.println(total + " Ватт - Суммарное энергпотребление");
 
-        return boiler.getPowerConsumption() + cappuccinator.getPowerConsumption() + coffeeGrinder.getPowerConsumption() + powerConsumption;
+        return coffeeMachine.powerConsumption;
 
 
     }

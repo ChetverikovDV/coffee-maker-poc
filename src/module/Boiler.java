@@ -22,7 +22,8 @@ public class Boiler implements Checkble {
         System.out.println(powerConsumption+" Ватт - Бойлер");
         return powerConsumption;
     }
-    public int getPowerConsumption(){
+
+    public int getPowerConsumption() {
         return powerConsumption;
     }
 }

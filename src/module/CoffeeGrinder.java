@@ -24,7 +24,8 @@ public class CoffeeGrinder implements Checkble {
         System.out.println(powerConsumption+ " Ватт - Гриндер");
         return powerConsumption;
     }
-    public int getPowerConsumption(){
+
+    public int getPowerConsumption() {
         return powerConsumption;
     }
 }
