@@ -30,7 +30,7 @@ public class CoffeeGrinder implements Checkble {
 
     @Override
     public boolean ready() {
-        return false;
+        return true;
     }
 }
 
