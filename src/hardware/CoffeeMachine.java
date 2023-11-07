@@ -63,8 +63,6 @@ public class CoffeeMachine implements Checkble {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
 
         boiler.check();
-        boiler.ready();
-
         cappuccinator.check();
         coffeeGrinder.check();
 
