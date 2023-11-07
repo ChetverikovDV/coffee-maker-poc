@@ -73,11 +73,6 @@ public class CoffeeMachine implements Checkble {
             System.exit(1);
         }
 
-        if (!boiler.ready()) {
-            System.out.println("Бойлер неисправен");
-            System.exit(0);
-        }
-
         int total = boiler.getPowerConsumption() + cappuccinator.getPowerConsumption()
                 + coffeeGrinder.getPowerConsumption() + powerConsumption;
         System.out.println("________________________________________________________");
