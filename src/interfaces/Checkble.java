@@ -1,5 +1,6 @@
 package interfaces;
 
 public interface Checkble {
-    int check();
+    void check();
+    boolean ready();
 }

@@ -13,12 +13,17 @@ public class Cappuccinator implements Checkble {
     }
 
     @Override
-    public int check() {
+    public void check() {
         System.out.println(powerConsumption+" Ватт - Капучинатор");
-        return powerConsumption;
     }
 
     public int getPowerConsumption() {
         return powerConsumption;
     }
+
+    @Override
+    public boolean ready() {
+        return true;
+    }
 }
+

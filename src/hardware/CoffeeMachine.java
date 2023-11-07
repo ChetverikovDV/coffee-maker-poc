@@ -51,7 +51,7 @@ public class CoffeeMachine implements Checkble {
 
     }
 
-    public int check() {
+    public void check() {
 
         System.out.println("Запускаю процессор ");
 
@@ -68,6 +68,11 @@ public class CoffeeMachine implements Checkble {
         cappuccinator.check();
         coffeeGrinder.check();
 
+        if (!boiler.ready()|!coffeeMachine.ready()|!cappuccinator.ready()|!coffeeGrinder.ready()) {
+            System.out.println("Не попьем мы кофе сегодня. Что-то не так");
+            System.exit(1);
+        }
+
         if (!boiler.ready()) {
             System.out.println("Бойлер неисправен");
             System.exit(0);
@@ -78,10 +83,14 @@ public class CoffeeMachine implements Checkble {
         System.out.println("________________________________________________________");
         System.out.println(total + " Ватт - Суммарное энергпотребление");
 
-        return coffeeMachine.powerConsumption;
-
 
     }
+
+    @Override
+    public boolean ready() {
+        return true;
+    }
+
 
 }
 

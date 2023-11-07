@@ -2,12 +2,10 @@ package module;
 
 import hardware.CurrentRecipe;
 import interfaces.Checkble;
-import interfaces.Ready;
 
-public class Boiler implements Checkble, Ready {
+public class Boiler implements Checkble {
 
     int powerConsumption = 2000; //Энергопотребление
-    boolean status = false;       //Готовность
 
     public void boil(CurrentRecipe coffee) {
         System.out.println(
@@ -21,9 +19,8 @@ public class Boiler implements Checkble, Ready {
                         + coffee.getSimpleBoiledWater() + " мл. кипятка");
     }
 
-    public int check() {
-        System.out.print(powerConsumption + " Ватт - Бойлер - ");
-        return powerConsumption;
+    public void check() {
+        System.out.println(powerConsumption + " Ватт - Бойлер");
     }
 
     public int getPowerConsumption() {
@@ -31,11 +28,7 @@ public class Boiler implements Checkble, Ready {
     }
 
     public boolean ready() {
-        if (status)
-            System.out.println("Готов");
-        else
-            System.out.println("Не готов");
-        return status;
+        return true;
     }
 }
 

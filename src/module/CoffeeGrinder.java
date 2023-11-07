@@ -20,13 +20,17 @@ public class CoffeeGrinder implements Checkble {
     }
 
     @Override
-    public int check() {
+    public void check() {
         System.out.println(powerConsumption+ " Ватт - Гриндер");
-        return powerConsumption;
     }
 
     public int getPowerConsumption() {
         return powerConsumption;
+    }
+
+    @Override
+    public boolean ready() {
+        return false;
     }
 }
 
