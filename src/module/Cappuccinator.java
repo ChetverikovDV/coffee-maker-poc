@@ -4,7 +4,7 @@ import hardware.CurrentRecipe;
 import interfaces.Checkble;
 
 public class Cappuccinator implements Checkble {
-    int powerConsumption = 300;
+    private final int powerConsumption = 300;
 
     public void makeMilkFoam(CurrentRecipe coffee) {
         System.out.println(
@@ -23,7 +23,7 @@ public class Cappuccinator implements Checkble {
 
     @Override
     public boolean ready() {
-        return false;
+        return true;
     }
 }
 

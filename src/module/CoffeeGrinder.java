@@ -6,8 +6,8 @@ import interfaces.Checkble;
 
 public class CoffeeGrinder implements Checkble {
 
-    Grinding grinding;
-    int powerConsumption = 800;
+    private Grinding grinding;
+    private final int powerConsumption = 800;
 
     public void grind(CurrentRecipe coffee) {
         System.out.println(

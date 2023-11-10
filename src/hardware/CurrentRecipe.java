@@ -3,11 +3,11 @@ package hardware;
 import ingredient.Grinding;
 
 public class CurrentRecipe {
-    Grinding grinding;
-    int grammOfCoffee;
-    int water;
-    int simpleBoiledWater;
-    int milkFoam;
+    private Grinding grinding;
+    private int grammOfCoffee;
+    private int water;
+    private int simpleBoiledWater;
+    private int milkFoam;
 
     public Grinding getGrinding() {
 

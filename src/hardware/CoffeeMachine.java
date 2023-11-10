@@ -7,7 +7,6 @@ import module.CoffeeGrinder;
 import visual.*;
 
 public class CoffeeMachine implements Checkble {
-    int powerConsumption = 200;
 
     public void MakeCoffee(CurrentRecipe coffee) {
 
@@ -55,6 +54,7 @@ public class CoffeeMachine implements Checkble {
 
         System.out.println("Запускаю процессор ");
 
+        int powerConsumption = 200;
         System.out.println(powerConsumption + " Ватт - собственное потребление кофепроцессора");
 
         Boiler boiler = new Boiler();

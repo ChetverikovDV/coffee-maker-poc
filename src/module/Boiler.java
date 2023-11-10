@@ -5,7 +5,7 @@ import interfaces.Checkble;
 
 public class Boiler implements Checkble {
 
-    int powerConsumption = 2000; //Энергопотребление
+    private final int powerConsumption = 2000; //Энергопотребление
 
     public void boil(CurrentRecipe coffee) {
         System.out.println(
